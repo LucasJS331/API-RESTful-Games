@@ -1,11 +1,10 @@
 # 🎮 API DE GAMES 🎮
 
-Está é uma api RestFull utilizada para gestão de games cadastrados no banco de dados.
+Está é uma API RESTful utilizada para gestão de games cadastrados no banco de dados.
 
 Atenção!
 
 Apenas as EndPoints do verbo GET estão livres de autentificação, por questões de segurança.
-
 
 
 ## 🚩EndPoints 🚩
