@@ -7,10 +7,9 @@ function auth(req,res,next){
         let baarer = authToken.split(" ");
         const token = baarer[1];
 
-        jwt.verify(token,"kwnrwrnwk", (err, data)=>{
+        jwt.verify(token,process.env.TOKEN_SECRET, (err, data)=>{
             if(err){
-                res.status(401);
-                res.json({err: "token não autorizado"});
+                res.status(401).send("token não autorizado!");
             }
             else{
                 res.status(200);
@@ -22,12 +21,9 @@ function auth(req,res,next){
         });
     }
     else{
-        res.status(400);
-        res.json({err: "token requerido"});
+        res.status(401).send("token requerido!");
     }
-  
-
-    
+      
 }
 
 module.exports = auth;
